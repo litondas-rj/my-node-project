@@ -96,6 +96,7 @@ window.onload=function(){
         
     })
 }
+
 function generateFileName(name){
     let type=/(.jpeg|.jpg|.png|.gif)/
     return name.replace(type,'.png')
