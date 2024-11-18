@@ -1,0 +1,27 @@
+{
+  "name": "final-project-express",
+  "version": "1.0.0",
+  "description": "this is my first nodejs complete project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "rj raj",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.0",
+    "mongoose": "^8.7.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}

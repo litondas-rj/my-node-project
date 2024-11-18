@@ -1,0 +1,47 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/flash.ejs') %>
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center"> <%=SubTitle %></h3>
+            </div>
+            <div class="card-body">
+              <form action="/auth/signup" method="POST">
+                <label class="mb-2" for="username">User Name</label>
+                <input type="text" name="username" id="username" placeholder="enter your name" class="form-control form-control-sm <%=error.username?'is-invalid':'' %>">
+                <div class="invalid-feedback">
+                  <%=error.username && error.username %>
+                </div>
+                <label class="mb-2" for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="enter your email" class="form-control form-control-sm <%=error.email?'is-invalid':'' %>">
+                <div class="invalid-feedback">
+                  <%=error.email && error.email %>
+                </div>
+                <label class="mb-2" for="phone">Phone</label>
+                <input type="text" value="<%=value.phone?value.phone:'' %>" name="phone" id="phone" placeholder="enter your phone" class="form-control form-control-sm <%=error.phone?'is-invalid':'' %>">
+                <div class="invalid-feedback">
+                  <%=error.phone && error.phone %>
+                </div>
+                <label class="mb-2" for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="enter your password" class="form-control form-control-sm <%=error.password?'is-invalid':'' %>">
+                <div class="invalid-feedback">
+                  <%=error.password && error.password %>
+                </div>
+                <label class="mb-2" for="confirmpassword">Confirm Password</label>
+                <input type="password" value="<%=value.confirmpassword?value.confirmpassword:'' %>" name="confirmpassword" id="confirmpassword" placeholder="enter your confirmpassword" class="form-control form-control-sm <%=error.confirmpassword ? 'is-invalid' :'' %>">
+                <div class="invalid-feedback">
+                  <%=error.confirmpassword && error.confirmpassword %>
+                </div>
+                <input type="submit" value="signup" class="btn btn-sm btn-success mt-2">
+              </form>
+              <a href="/auth/login" class="text-center">Already Signup? Login Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
